@@ -12,6 +12,10 @@ create a  crontab for every hour
 
 @hourly php /root/sysmonitor.php
 
+or if you want it not to send  you a complete update
+
+@hourly php /root/sysmonitor.php >/dev/null 2>&1
+
 Then if any lxc containers space goes over 80% it will email you every hour.
 
 Like this - in this test we were setting it to anything above 40%.
@@ -21,3 +25,5 @@ lxc/108 regions90 184.65gb 452.21gb 40.83%
 
 
 As I only in fact use containers in the cluster (apart from 1 server) this is really what I needed.
+
+**_Note this will only work on a proxmox cluster - install on the cluster master_**
