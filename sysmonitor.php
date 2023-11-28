@@ -28,7 +28,7 @@ foreach ($data as $item) {
         $message = $item->id . " " . $item->name . " " . df($item->disk) . " " . df($item->maxdisk) . " " . round((($item->disk / $item->maxdisk) * 100), 2) . "% " . PHP_EOL;
         if ($diskpercent > 80) {
             echo "***" . $message . "***";
-            shell_exec('echo "' . $message . '" | mail -s "***DISK SPACE WARNING***" sales@garagemasteronline.com');
+            shell_exec('echo "' . $message . '" | mail -s "***DISK SPACE WARNING***" YOUR_EMAIL_ADDRESS_TO_SEND_TO');
         } else {
             echo $message;
         }
