@@ -1,10 +1,17 @@
 # promxox-diskmon
+
+#Standalone Version
+
+I have now added a standalone version for machines not in a cluster
+
+#Proxmox Version
+
 Monitors proxmox cluster lxc disk space and sends an email if any goes over 80%
 
 on the cluster master we dont need apahce2 
 
-# apt install PHP
-# apt remove apache2 
+apt install PHP
+apt remove apache2 
 
 set up posix so you can send email successfully, make sure your user has an email address set to send from.
 
