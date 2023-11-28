@@ -23,7 +23,8 @@ $data = json_decode($data);
 
 foreach ($data as $item) {
     $id = $item->id;
-    if (strpos($id, "lxc") !== false) {
+    // you can add in anything else you want to test for
+    if (strpos($id, "lxc") !== false || strpos($id,"lvm")!==false) {
         $diskpercent = round((($item->disk / $item->maxdisk) * 100), 2);
         $message = $item->id . " " . $item->name . " " . df($item->disk) . " " . df($item->maxdisk) . " " . round((($item->disk / $item->maxdisk) * 100), 2) . "% " . PHP_EOL;
         if ($diskpercent > 80) {
