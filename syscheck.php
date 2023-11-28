@@ -3,7 +3,7 @@
     Simple stand alone Email Script when disk space hits over 80%
     Paul Clevett / Lone Wolf 2023
     https://www.wolf-grid.com
-*/
+*/ 
 function df($itemdata) {
     return round($itemdata / 1024 / 1024 / 1024, 2) . "gb";
 }
