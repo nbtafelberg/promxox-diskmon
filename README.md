@@ -1,10 +1,10 @@
 # promxox-diskmon
 
-#Standalone Version
+# Standalone Version
 
-I have now added a standalone version for machines not in a cluster
+I have now added a standalone version for machines not in a cluster, just switch sysmonitor.php for syscheck.php
 
-#Proxmox Version
+# Proxmox Version
 
 Monitors proxmox cluster lxc disk space and sends an email if any goes over 80%
 
